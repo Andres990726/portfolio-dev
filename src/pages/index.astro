@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+---
+
+<Layout title="Welcome to Astro."
+  ><main>
+    <section class="w-full lg:w-[700px] mx-auto py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, soy Jaime <div class="flex justify-center items-center">
+          <Badge>Disonible para trabajar</Badge>
+        </div>
+      </h1>
+      <h2 class="text-2xl text-white text-wrap">
+        <span>+2 años de experiencia.</span><span class="text-yellow-200/90">
+          Desarrollador Web Fullstack.</span
+        > De Popayán, Colombia. Especializado en crear aplicaciones únicas
+      </h2>
+      <nav class="flex gap-x-2">
+        <SocialPill href="https://www.linkedin.com/in/andres990726/"
+          ><LinkedInIcon class="w-6 h-6" /> LinkedIn</SocialPill
+        >
+        <SocialPill href="https://github.com/Andres990726"
+          ><GitHubIcon class="w-6 h-6" /> GitHub</SocialPill
+        >
+      </nav>
+    </section>
+  </main></Layout
+>
