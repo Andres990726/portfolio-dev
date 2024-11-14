@@ -1,32 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import TitleSection from "../components/TitleSection.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import Hero from "@/components/Hero.astro";
+import AboutMe from "@/components/AboutMe.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 ---
 
-<Layout title="Welcome to Astro."
-  ><main>
-    <section class="w-full lg:w-[700px] mx-auto py-44">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hey, soy Jaime <div class="flex justify-center items-center">
-          <Badge>Disonible para trabajar</Badge>
-        </div>
-      </h1>
-      <h2 class="text-2xl text-white text-wrap">
-        <span>+2 años de experiencia.</span><span class="text-yellow-200/90">
-          Desarrollador Web Fullstack.</span
-        > De Popayán, Colombia. Especializado en crear aplicaciones únicas
-      </h2>
-      <nav class="flex gap-x-2">
-        <SocialPill href="https://www.linkedin.com/in/andres990726/"
-          ><LinkedInIcon class="w-6 h-6" /> LinkedIn</SocialPill
-        >
-        <SocialPill href="https://github.com/Andres990726"
-          ><GitHubIcon class="w-6 h-6" /> GitHub</SocialPill
-        >
-      </nav>
-    </section>
-  </main></Layout
->
+<Layout
+  title="Portfolio de Jaime - Desarrollador y Programador Web Fullstack con 2 años de experiencia"
+  description="Contrata a Jaime, un desarrollador web fullstack con más de 2 años de experiencia en el desarrollo de aplicaciones web únicas."
+  ><main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
+    </SectionContainer>
+  </main>
+  <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Proyectos
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+</Layout>

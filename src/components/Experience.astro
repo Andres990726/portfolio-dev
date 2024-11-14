@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Julio 2022 – Actual, Cali, Colombia",
+    title: "Desarrollador Frontend",
+    company: "Atix Digital",
+    description:
+      "Encargado de desarrollar y optimizar aplicaciones web para sectores bancarios y gubernamentales, logrando mejoras significativas en rendimiento y usabilidad. Implementé prácticas de CI/CD que incrementaron la eficiencia en la entrega de software y colaboré estrechamente con el equipo backend y de diseño para asegurar una integración fluida. También lideré la migración de aplicaciones de React a Next.js, logrando un aumento del 30% en la optimización de SEO y rendimiento de carga.",
+  },
+  {
+    date: "Feb 2022 – Sep 2022, Bogotá, Colombia",
+    title: "Analista QA",
+    company: "Cari AI",
+    description:
+      "Coordiné pruebas de software para garantizar la calidad en los productos, diseñando casos y planes de prueba detallados. Identifiqué y documenté defectos en colaboración con el equipo de desarrollo, contribuyendo a la mejora continua de los procesos de control de calidad.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
