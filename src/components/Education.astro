@@ -1,0 +1,23 @@
+---
+import EducationItem from "./EducationItem.astro";
+
+const EDUCATION = [
+  {
+    date: "Febrero 2018 – Actual, Popayán, Colombia",
+    title: "Ingeniería de Sistemas",
+    company: "Universidad del cauca",
+    description:
+      "Actualmente curso el décimo semestre de Ingeniería de Sistemas en la Universidad del Cauca, donde me he especializado en todas las etapas del desarrollo de software, desde el análisis hasta la implementación de sistemas computacionales. He adquirido conocimientos en diseño de software, bases de datos y sistemas distribuidos, además de experiencia en programación y gestión de proyectos tecnológicos enfocados en soluciones innovadoras y escalables",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EDUCATION.map((education) => (
+      <li class="">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>

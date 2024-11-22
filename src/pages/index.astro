@@ -5,10 +5,12 @@ import Experience from "../components/Experience.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import TitleSection from "../components/TitleSection.astro";
 import CodeIcon from "../components/icons/Code.astro";
+import BookIcon from "../components/icons/Book.astro";
 import Projects from "../components/Projects.astro";
 import Hero from "@/components/Hero.astro";
 import AboutMe from "@/components/AboutMe.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import Education from "@/components/Education.astro";
 ---
 
 <Layout
@@ -34,6 +36,13 @@ import ProfileCheck from "@/components/icons/ProfileCheck.astro";
         Proyectos
       </TitleSection>
       <Projects />
+    </SectionContainer>
+    <SectionContainer id="educacion">
+      <TitleSection>
+        <BookIcon class="size-7" />
+        Educación
+      </TitleSection>
+      <Education />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
