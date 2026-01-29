@@ -1,44 +1,67 @@
 ---
 const personalImageAlt = "Jaime Andrés";
+
 import Badge from "@/components/Badge.astro";
 import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
+
+// Inicio de experiencia profesional: Julio 2022
+const startDate = new Date(2022, 6); // Julio = 6
+const now = new Date();
+
+// Cálculo de años de experiencia (redondeado hacia abajo)
+let yearsOfExperience =
+  now.getFullYear() -
+  startDate.getFullYear() -
+  (now.getMonth() < startDate.getMonth() ? 1 : 0);
+
+// Garantiza que nunca muestre 0
+yearsOfExperience = Math.max(yearsOfExperience, 1);
 ---
 
 <div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
+  <div class="flex gap-4 mb-4 items-center">
     <img
       class="rounded-full shadow-lg size-16"
-      src="/JaimeGarcia.png"
+      src="/public/JaimeGarcia.png"
       alt={personalImageAlt}
     />
+
     <a
       href="https://linkedin.com/in/andres990726"
       target="_blank"
       rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+      class="transition md:hover:scale-105"
     >
       <Badge>Disponible para trabajar</Badge>
     </a>
   </div>
+
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
     Hey, soy Jaime
   </h1>
+
   <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    class="mt-6 text-xl text-gray-800 dark:text-gray-300
+           [&>strong]:font-semibold
+           [&>strong]:text-yellow-500
+           dark:[&>strong]:text-yellow-200"
   >
-    +2 años de experiencia. <strong
-      >Ingeniero de Software y Desarrollador FullStack</strong
-    > de popayán, Colombia. Especializado en el desarrollo de aplicaciones web únicas.
+    +{yearsOfExperience} años de experiencia.
+    <strong>Ingeniero de Software y Desarrollador Fullstack</strong>
+    de Popayán, Colombia. Especializado en el desarrollo de aplicaciones web
+    únicas.
   </p>
+
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:andresgarcia990726@gmail.com">
       <MailIcon class="size-4" />
       Contáctame
     </SocialPill>
+
     <SocialPill href="https://linkedin.com/in/andres990726">
       <LinkedInIcon class="size-4" />
       LinkedIn

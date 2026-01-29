@@ -1,5 +1,13 @@
 ---
 const personalImageAlt = "Jaime Andrés";
+const startDate = new Date(2022, 6);
+const now = new Date();
+
+// Cálculo de años de experiencia
+const yearsOfExperience =
+  now.getFullYear() -
+  startDate.getFullYear() -
+  (now.getMonth() < startDate.getMonth() ? 1 : 0);
 ---
 
 <article
@@ -9,33 +17,29 @@ const personalImageAlt = "Jaime Andrés";
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      ¡Hola! Me llamo Jaime Andrés García Gil. Desde temprana edad, me apasiona
-      la tecnología, lo que me llevó a especializarme como desarrollador
-      frontend y, ahora, a trabajar como fullstack para contribuir en el ciclo
-      completo de desarrollo.
+      Hola, soy <strong>Jaime Andrés García Gil</strong>, desarrollador <strong
+        >Frontend</strong
+      > con más de <strong>{yearsOfExperience} años de experiencia</strong>, especializado en la
+      creación de interfaces eficientes, accesibles y centradas en el usuario.
+      He participado en proyectos colaborativos junto a equipos
+      multidisciplinarios, aportando soluciones de alta calidad orientadas a la
+      optimización de procesos y la mejora continua del producto.
     </p>
 
     <p>
-      Cuento con más de 2 años de experiencia en <strong
-        >proyectos colaborativos de gran impacto</strong
-      > en sectores como el bancario y gubernamental, donde he desarrollado aplicaciones
-      que optimizan procesos mediante inteligencia artificial para la extracción
-      y procesamiento de información de documentos.
-    </p>
-
-    <p>
-      Mi perfil fullstack me permite integrar frontend y backend para
-      desarrollar <strong>soluciones completas, robustas y escalables</strong>.
-      Con conocimientos en tecnologías como Java y Spring Boot, junto con React
-      y Next.js, mi objetivo es crear productos que no solo sean funcionales y
-      eficientes, sino también altamente adaptables y centrados en el usuario.
+      Soy <strong>Ingeniero de Sistemas</strong>, con una formación que
+      fortalece el pensamiento analítico, las buenas prácticas de desarrollo y
+      la resolución de problemas complejos. Actualmente me encuentro en
+      transición hacia el rol de Desarrollador Fullstack, motivado por ampliar
+      mi impacto en el ciclo completo de desarrollo y fortalecer mis habilidades
+      en backend.
     </p>
   </div>
 
   <img
     width="200"
     height="200"
-    src="/Andres.png"
+    src="/public/Andres.png"
     alt={personalImageAlt}
     class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
     style="object-position: 50% 50%"
